@@ -1,0 +1,5 @@
+sleep_index 1
+brightness_index 0
+last_profile 1
+fw_ver 2.3.2
+kb_layout dpkm_English (UK).txt
