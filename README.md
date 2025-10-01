@@ -23,7 +23,8 @@ Wall-mounted duckyPad for controlling shairport-sync via MPRIS.
 
 ### Scripts
 - `./pull_config.sh` - Update scripts from server setup
-- `./push_config.sh` - Update server setup from scripts
+- `./push_config.sh` - Copies setup files to server's temp directory
+- `./Scrpting/install_configs.sh` - Installs config files and updates daemons
 
 ### Services
 - `shairport-sync` - AirPlay receiver with MPRIS enabled
