@@ -4,7 +4,7 @@ Wall-mounted duckyPad for controlling shairport-sync via MPRIS.
 
 ## Hardware
 
-- duckyPad (2020) with custom 3D printed case
+- duckyPad (2020) with custom 3D printed case, mounted on the wall with Command Strips
 - fitPC3 music server running Debian
 - Connected via USB
 
