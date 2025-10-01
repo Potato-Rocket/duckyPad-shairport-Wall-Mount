@@ -13,19 +13,14 @@ BACKUP_DIR="Scripting"
 
 echo "Restoring duckyPad configuration to $SERVER from backup..."
 
-# Push config files
-echo "Posting triggerhappy trigger config..."
-scp "$BACKUP_DIR/shairport.conf" "$SERVER:/etc/triggerhappy/triggers.d/" || echo "Warning: Could not post shairport.conf"
-
-echo "Posting systemd override..."
-scp "$BACKUP_DIR/override.conf" "$SERVER:/etc/systemd/system/triggerhappy.service.d/"  || echo "Warning: Could not post override.conf"
-
-echo "Posting shairport-sync config..."
-scp "$SERVER:/etc/shairport-sync.conf" "$BACKUP_DIR/" || echo "Warning: Could not post shairport-sync.conf"
+# Copy files to temp directory
+echo "Copying files to server's temp directory..."
+scp "$BACKUP_DIR/shairport.conf" "$SERVER:/tmp/" || { echo "Error copying shairport.conf"; exit 1; }
+scp "$BACKUP_DIR/shairport-sync.conf" "$SERVER:/tmp/" || { echo "Error copying shairport-sync.conf"; exit 1; }
+scp "$BACKUP_DIR/override.conf" "$SERVER:/tmp/" || { echo "Error copying override.conf"; exit 1; }
+scp "$BACKUP_DIR/install_configs.sh" "$SERVER:/tmp/" || { echo "Error copying installer"; exit 1; }
 
 echo ""
-echo "Backup complete! Files saved to $BACKUP_DIR/"
-echo ""
-echo "To load changes:"
+echo "Files copied to server. Now run on the server:"
 echo "  ssh $SERVER"
-echo "  sudo systemctl reload shairport-sync triggerhappy"
+echo "  sudo bash /tmp/install_configs.sh"
