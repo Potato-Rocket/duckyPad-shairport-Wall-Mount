@@ -51,3 +51,6 @@ Because of the delay inherent to AirPlay audio streaming, there is about a 1-3 s
 
 ## Photos
 
+![Case photo 1](Photos/Case1.jpg)
+![Case photo 2](Photos/Case2.jpg)
+![Case photo 3](Photos/Case3.jpg)
