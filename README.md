@@ -2,9 +2,11 @@
 
 Wall-mounted duckyPad for controlling shairport-sync via MPRIS.
 
+![Setup photo](Photos/Setup.jpg)
+
 ## Hardware
 
-- duckyPad (2020) with custom 3D printed case, mounted on the wall with Command Strips
+- duckyPad (2020) with custom 3D printed case (replaces the bottom plate), mounted on the wall with Command Strips
 - fitPC3 music server running Debian
 - Connected via USB
 
@@ -48,7 +50,7 @@ Keys programmed with media key codes:
 
 Volume control is best to do via physical amplifier knob. While iPhone/iPad volume rocker is convenient from afar, volume modification controlled from fitPC3 was unreliable. Since the duckyPad is in arm's reach of the amplifier, it makes most sense to be able to easily maximize the digital volume for best fidelity and volume consistency.
 
-Because of the delay inherent to AirPlay audio streaming, there is about a 1-3 second delay in the duckyPad -> triggerhappy -> MPRIS -> AirPlay device -> shairport-sync pipeline. This is judged to be acceptable for the use case. The mute function is nearly instantaneous because it works through ALSA directly.
+Because of the delay inherent to AirPlay audio streaming synchronization, there is about a 1-3 second delay in the duckyPad -> triggerhappy -> MPRIS -> AirPlay device -> shairport-sync -> ALSA pipeline. This is judged to be acceptable for the use case. The mute function is nearly instantaneous because it works through ALSA directly, as is the volume modification it does not need to wait for synchronization.
 
 ## Photos
 
