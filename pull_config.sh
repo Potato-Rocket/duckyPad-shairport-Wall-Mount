@@ -18,7 +18,7 @@ mkdir -p "$BACKUP_DIR"
 
 # Pull config files
 echo "Fetching triggerhappy trigger config..."
-scp "$SERVER:/etc/triggerhappy/triggers.d/shairport.conf" "$BACKUP_DIR/" || echo "Warning: Could not fetch shairport.conf"
+scp "$SERVER:/etc/triggerhappy/triggers.d/media_control.conf" "$BACKUP_DIR/" || echo "Warning: Could not fetch media_control.conf"
 
 echo "Fetching systemd override..."
 scp "$SERVER:/etc/systemd/system/triggerhappy.service.d/override.conf" "$BACKUP_DIR/" || echo "Warning: Could not fetch override.conf"

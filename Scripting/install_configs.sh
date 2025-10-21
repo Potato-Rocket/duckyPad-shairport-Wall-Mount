@@ -9,7 +9,7 @@ fi
 echo "Installing configuration files..."
 
 mv /tmp/shairport-sync.conf /etc/shairport-sync.conf
-mv /tmp/shairport.conf /etc/triggerhappy/triggers.d/shairport.conf
+mv /tmp/media_control.conf /etc/triggerhappy/triggers.d/media_control.conf
 mv /tmp/override.conf /etc/systemd/system/triggerhappy.service.d/override.conf
 
 systemctl daemon-reload
